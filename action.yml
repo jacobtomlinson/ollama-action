@@ -1,9 +1,10 @@
-name: github-actions-composite-template
-description: GitHub Actions Composite Template
+name: ollama
+description: Run Ollama large language models in GitHub Actions
 author: remarkablemark
 inputs:
   version:
     description: Description
+    required: false
     default: 1.2.3
 runs:
   using: composite
@@ -13,5 +14,5 @@ runs:
       run: |
         echo 'version: ${{ inputs.version }}'
 branding:
-  icon: activity
-  color: white
+  icon: terminal
+  color: gray-dark

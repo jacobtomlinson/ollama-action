@@ -1,18 +1,42 @@
 name: ollama
 description: Run Ollama large language models in GitHub Actions
 author: remarkablemark
+
 inputs:
+  model:
+    description: Language model name
+    required: true
+  prompt:
+    description: Input prompt to generate a response for
+    required: true
   version:
-    description: Description
+    description: Ollama version
     required: false
-    default: 1.2.3
+
+outputs:
+  response:
+    description: Generated response message
+    value: ${{ steps.llm.outputs.response }}
+
 runs:
   using: composite
   steps:
-    - name: Print version
+    - name: Setup Ollama
+      uses: ai-action/setup-ollama@v1
+      with:
+        version: ${{ inputs.version }}
+
+    - name: Run LLM
+      id: llm
       shell: bash
       run: |
-        echo 'version: ${{ inputs.version }}'
+        EOF=EOF_OLLAMA_$(openssl rand -hex 12)
+        {
+          echo "response<<$EOF"
+          ollama run ${{ toJSON(inputs.model) }} ${{ toJSON(inputs.prompt) }}
+          echo $EOF
+        } >> $GITHUB_OUTPUT
+
 branding:
   icon: terminal
   color: gray-dark

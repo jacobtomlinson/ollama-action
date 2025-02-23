@@ -81,7 +81,7 @@ To set a multiline prompt:
 
 ### `version`
 
-**Optional**: The [Ollama version](https://github.com/ai-action/setup-ollama#version) to use. See available [versions](https://github.com/ollama/ollama/releases).
+**Optional**: The [Ollama version](https://github.com/ai-action/setup-ollama#version). See the available [versions](https://github.com/ollama/ollama/releases).
 
 ```yaml
 - uses: ai-action/ollama-action@v1

@@ -1,4 +1,4 @@
-name: ollama
+name: ollama-action
 description: Run Ollama large language models in GitHub Actions
 author: remarkablemark
 

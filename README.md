@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run LLM
-        uses: ai-action/ollama@v1
+        uses: ai-action/ollama-action@v1
         id: llm
         with:
           model: llama3.2
@@ -33,7 +33,7 @@ jobs:
 Run a prompt against a [model](https://ollama.com/library):
 
 ```yaml
-- uses: ai-action/ollama@v1
+- uses: ai-action/ollama-action@v1
   id: explanation
   with:
     model: tinyllama
@@ -54,7 +54,7 @@ See [action.yml](action.yml)
 **Required**: The language [model](https://ollama.com/library) to use.
 
 ```yaml
-- uses: ai-action/ollama@v1
+- uses: ai-action/ollama-action@v1
   with:
     model: llama3.2
 ```
@@ -64,7 +64,7 @@ See [action.yml](action.yml)
 **Required**: The input prompt to generate the text from.
 
 ```yaml
-- uses: ai-action/ollama@v1
+- uses: ai-action/ollama-action@v1
   with:
     prompt: Tell me a joke.
 ```
@@ -72,7 +72,7 @@ See [action.yml](action.yml)
 To set a multiline prompt:
 
 ```yaml
-- uses: ai-action/ollama@v1
+- uses: ai-action/ollama-action@v1
   with:
     prompt: |
       Tell me
@@ -84,7 +84,7 @@ To set a multiline prompt:
 **Optional**: The [Ollama version](https://github.com/ai-action/setup-ollama#version) to use. See available [versions](https://github.com/ollama/ollama/releases).
 
 ```yaml
-- uses: ai-action/ollama@v1
+- uses: ai-action/ollama-action@v1
   with:
     version: 0.5.11
 ```
@@ -96,7 +96,7 @@ To set a multiline prompt:
 The generated response message.
 
 ```yaml
-- uses: ai-action/ollama@v1
+- uses: ai-action/ollama-action@v1
   id: answer
   with:
     model: llama3.2

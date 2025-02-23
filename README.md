@@ -108,6 +108,8 @@ The generated response message.
   run: echo "$response"
 ```
 
+The environment variable is wrapped in double quotes to preserve newlines.
+
 ## License
 
 [MIT](LICENSE)

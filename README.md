@@ -1,7 +1,7 @@
-# ollama
+# ollama-action
 
-[![version](https://badgen.net/github/release/ai-action/ollama)](https://github.com/ai-action/ollama/releases)
-[![test](https://github.com/ai-action/ollama/actions/workflows/test.yml/badge.svg)](https://github.com/ai-action/ollama/actions/workflows/test.yml)
+[![version](https://badgen.net/github/release/ai-action/ollama-action)](https://github.com/ai-action/ollama-action/releases)
+[![test](https://github.com/ai-action/ollama-action/actions/workflows/test.yml/badge.svg)](https://github.com/ai-action/ollama-action/actions/workflows/test.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 🦙 Run [Ollama](https://ollama.com/) large language models in GitHub Actions.

@@ -33,9 +33,12 @@ runs:
         EOF=EOF_OLLAMA_$(openssl rand -hex 12)
         {
           echo "response<<$EOF"
-          ollama run ${{ toJSON(inputs.model) }} ${{ toJSON(inputs.prompt) }}
+          ollama run $MODEL "$PROMPT"
           echo $EOF
         } >> $GITHUB_OUTPUT
+      env:
+        MODEL: ${{ inputs.model }}
+        PROMPT: ${{ inputs.prompt }}
 
 branding:
   icon: terminal

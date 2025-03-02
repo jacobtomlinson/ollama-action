@@ -1,3 +1,7 @@
+<p align="center">
+  <img alt="ollama" height="200px" src="https://raw.githubusercontent.com/ai-action/assets/master/logos/ollama.svg">
+</p>
+
 # ollama-action
 
 [![version](https://badgen.net/github/release/ai-action/ollama-action)](https://github.com/ai-action/ollama-action/releases)

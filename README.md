@@ -4,7 +4,7 @@
 [![test](https://github.com/ai-action/ollama-action/actions/workflows/test.yml/badge.svg)](https://github.com/ai-action/ollama-action/actions/workflows/test.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-🦙 Run [Ollama](https://ollama.com/) large language models in GitHub Actions.
+🦙 Run [Ollama](https://ollama.com/) large language models (LLMs) with GitHub Actions.
 
 ## Quick Start
 

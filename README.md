@@ -115,6 +115,11 @@ The generated response message.
 > [!NOTE]
 > The environment variable is wrapped in double quotes to preserve newlines.
 
+## Articles
+
+- [Generating useful titles for automated PRs in GitHub Actions](https://jacobtomlinson.dev/posts/2025/generating-useful-titles-for-automated-prs-in-github-actions/)
+- [How to run Ollama LLM on GitHub Actions](https://medium.com/@remarkablemark/how-to-run-ollama-large-language-models-llm-on-github-actions-for-free-bb4219d09a29)
+
 ## License
 
 [MIT](LICENSE)

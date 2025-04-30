@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/ai-action/ollama-action/compare/v1.0.1...v1.1.0) (2025-04-30)
+
+
+### Features
+
+* **action:** cache model with optional input `cache` (defaults to true) ([4600a6a](https://github.com/ai-action/ollama-action/commit/4600a6af8f47d6f18e067ed68320b52cb0d153db))
+
 ## [1.0.1](https://github.com/ai-action/ollama-action/compare/v1.0.0...v1.0.1) (2025-04-29)
 
 

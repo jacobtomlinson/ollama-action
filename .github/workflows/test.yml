@@ -15,8 +15,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Run action
-        id: response-1
+      - name: Run action 1 with cache
+        id: response1
         uses: ./
         with:
           model: tinyllama
@@ -25,12 +25,12 @@ jobs:
 
       - name: Print response 1
         shell: bash
-        env:
-          response: ${{ steps.response-1.outputs.response }}
         run: echo "$response"
+        env:
+          response: ${{ steps.response1.outputs.response }}
 
-      - name: Run action with multiline prompt
-        id: response-2
+      - name: Run action 2 with multiline prompt
+        id: response2
         uses: ./
         with:
           model: tinyllama
@@ -42,12 +42,12 @@ jobs:
 
       - name: Print response 2
         shell: bash
-        env:
-          response: ${{ steps.response-2.outputs.response }}
         run: echo "$response"
+        env:
+          response: ${{ steps.response2.outputs.response }}
 
-      - name: Run action
-        id: response-3
+      - name: Run action 3 with special characters
+        id: response3
         uses: ./
         with:
           model: tinyllama
@@ -62,6 +62,6 @@ jobs:
 
       - name: Print response 3
         shell: bash
-        env:
-          response: ${{ steps.response-3.outputs.response }}
         run: echo "$response"
+        env:
+          response: ${{ steps.response3.outputs.response }}

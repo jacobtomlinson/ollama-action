@@ -21,6 +21,7 @@ jobs:
         with:
           model: tinyllama
           prompt: What's a large language model?
+          cache: true
 
       - name: Print response 1
         shell: bash
@@ -37,6 +38,7 @@ jobs:
             Tell me
             a joke.
           version: 0.5.10
+          cache: false
 
       - name: Print response 2
         shell: bash

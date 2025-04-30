@@ -12,11 +12,14 @@ inputs:
   version:
     description: Ollama version
     required: false
+  cache:
+    description: Whether to cache the model
+    required: false
 
 outputs:
   response:
     description: Generated response message
-    value: ${{ steps.llm.outputs.response }}
+    value: ${{ steps.model.outputs.response }}
 
 runs:
   using: composite
@@ -26,8 +29,15 @@ runs:
       with:
         version: ${{ inputs.version }}
 
-    - name: Run LLM
-      id: llm
+    - name: Cache model
+      if: inputs.cache == 'true'
+      uses: actions/cache@v4
+      with:
+        path: ~/.ollama
+        key: ollama-action-${{ runner.os }}
+
+    - name: Run model
+      id: model
       shell: bash
       run: |
         EOF=EOF_OLLAMA_$(openssl rand -hex 12)

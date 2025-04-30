@@ -19,17 +19,17 @@ jobs:
   ollama:
     runs-on: ubuntu-latest
     steps:
-      - name: Run LLM
+      - name: Run model
         uses: ai-action/ollama-action@v1
-        id: llm
+        id: model
         with:
           model: llama3.2
           prompt: Explain the basics of machine learning.
 
-      - name: Get response
-        env:
-          response: ${{ steps.llm.outputs.response }}
+      - name: Print response
         run: echo "$response"
+        env:
+          response: ${{ steps.model.outputs.response }}
 ```
 
 ## Usage
@@ -43,10 +43,9 @@ Run a prompt against a [model](https://ollama.com/library):
     model: tinyllama
     prompt: "What's a large language model?"
 
-- name: Get response
+- run: echo "$response"
   env:
     response: ${{ steps.explanation.outputs.response }}
-  run: echo "$response"
 ```
 
 See [action.yml](action.yml)
@@ -116,10 +115,9 @@ The generated response message.
     model: llama3.2
     prompt: What's 1+1?
 
-- name: Get response
+- run: echo "$response"
   env:
     response: ${{ steps.answer.outputs.response }}
-  run: echo "$response"
 ```
 
 > [!NOTE]

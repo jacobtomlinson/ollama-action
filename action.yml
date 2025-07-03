@@ -25,7 +25,7 @@ runs:
   using: composite
   steps:
     - name: Setup Ollama
-      uses: ai-action/setup-ollama@v1
+      uses: ai-action/setup-ollama@v1.2.12
       with:
         version: ${{ inputs.version }}
 
